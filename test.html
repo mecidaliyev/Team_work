@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>ThunderBolt Official Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="icon" href="Thunderbolt-PNG-File.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="est_1.png" alt="ThunderBolt_logo">
+            <div class="nav-links">
+                <li><a href="#home" class="cool-link">Home</a></li>
+                <li><a href="#aboutUs" class="cool-link">About Us</a></li>
+                <li><a href="#webProject" class="cool-link">Web Project</a></li>
+                <li><a href="#hourOfCode" class="cool-link">Hour of Code</a></li>
+                <li><a href="#robotics" class="cool-link">Robotics</a></li>
+            </div>
+        </nav>
+        <a name="home"></a>
+    </header>
+        <div class="color">
+            <button onclick="getNewColor()">Change background color</button>
+        </div>
+        <div id="time"></div>
+
+        <script type="text/javascript">
+            function getNewColor() {
+                let symbols, color;
+
+                symbols = "0123456789ABCDEF";
+
+                color = "#";
+                for(let i = 0; i < 6; i++){
+                    color += symbols[Math.floor(Math.random() * 16)];   
+                }
+                document.body.style.background = color;
+            }
+
+            setInterval(() => {
+                
+                const time = document.querySelector("#time");
+                let date = new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let day_time = "AM";
+
+
+                if (hours > 12)
+                {
+                    hours -= 12;
+                    day_time = "PM";
+                }
+                if (hours < 10)
+                {
+                    hours = "0" + hours;
+                }
+                if (minutes < 10)
+                {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < 10)
+                {
+                    seconds = "0" + seconds;
+                }
+
+
+                time.textContent = hours + " : " + minutes + " : " + seconds + " " +  day_time;
+                });
+        </script>
+    <div>
+    <div class="about_us_main">
+            <a name="aboutUs"></a>
+            <div><h1>ABOUT US</h1></div>
+            <div class="about-section">
+            
+                <div class="inner-container">
+                    <h1>Majid Aliyev</h1>
+                    <p class="text">Study at ADA University </p>
+                    <p>Major: Computer Science</p>
+            
+                    <div class="codecademy">
+                        <span>  <a href="https://www.codecademy.com/profiles/majidaliyev" target="_blank"><em>Codecademy profile page</em></a></span>
+                    </div>
+                </div>
+        
+                <div class="inner-container">
+                    <h1>Emil Mehdikhanli</h1>
+                    <p class="text">Study at ADA University </p>
+                    <p>Major: Computer Science</p>
+            
+                    <div class="codecademy">
+                        <span>  <a href="https://www.codecademy.com/profiles/EmilM13747" target="_blank"><em>Codecademy profile page</em></a></span>
+                    </div>
+                </div>
+        
+                <div class="inner-container">
+                    <h1>Javid Mirzayev</h1>
+                    <p class="text">Study at ADA University </p>
+                    <p>Major: Computer Science</p>
+            
+                    <div class="codecademy">
+                        <span>  <a href="https://www.codecademy.com/profiles/jmirzayev" target="_blank"><em>Codecademy profile page</em></a></span>
+                    </div>
+                </div>
+        
+                <div class="inner-container">
+                    <h1>Parviz Babazada</h1>
+                    <p class="text">Study at ADA University </p>
+                    <p>Major: Computer Science</p>
+                    <div class="codecademy">
+                        <span>  <a href="https://www.codecademy.com/profiles/Babayev633" target="_blank"><em>Codecademy profile page</em></a></span>
+                    </div>           <!--Parviz has premium account, only logged in user have access to check the account-->
+                </div>               
+            </div>
+    </div>
+
+    <a name="webProject"></a>
+    <div class="web_project">
+        <img src="website.png">
+        <div class="web_text">
+            <h1 style="color:azure">ABOUT WEBSITE PROJECT</h1>
+            <h4>This project has been assigned to our team as a part of Intro to ICT & Engineering. We needed to complete the interactive HTML and CSS projects in Codeacademy and subsequently, start to build this website from scratch. It was a valuable experience to get acquainted with the essentials of Web Development. </h1>
+            <br>
+            <h4>Firstly, we started with completing the respective interactive courses and brainstorming the ideas about the upcoming website build. Subsequently, we tried to find the best team name and logo. The final team name has been suggested by Javid Mirzayev, while Emil Mehdikhanli made the most liked logo, thus his draft has been chosen as the final one. Afterwards, we divided the work into equally long pieces and started working individually, taking feedback from one another to further improve the work. Finally, the individually made pages merged into one final build, with necessary edits and final touches to make it consistent all around.</h2>
+        </div>
+    </div>
+
+
+    <div class="hour_of_code_project">
+        <a name="hourOfCode"></a>
+        <h1>WHAT IS HOUR OF CODE?</h1>
+        <p>The Hour of Code started as a one-hour introduction to computer science, designed to demystify "code", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the tutorials and activities. This grassroots campaign is supported by over 400 partners and 200,000 educators worldwide.</p>
+        <br>
+        <br>
+        <p>Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings.
+        The name of the school that we conducted the session was Zangilan (Karabakh) Secondary school No. 26</p>
+        <iframe class="hourofcode_video" width="800" height="515"
+        src="https://www.youtube.com/embed/qMqk-rHqlEM">
+        </iframe>
+        <br>
+        <br>
+        <p3 class="hoc_link">If you want to see the full report, <a href="hourofcode.pdf" target="_blank"><em>CLICK HERE</em></a> to download.</p3>
+    </div>
+
+    <div class="Robotics">
+    <a name="robotics"></a>
+        <div class="robotics">
+            <h1>Robotics Project</h1>
+            <div class="robot_thumb"><img src="robot.png"/></div>
+            <br><br><br><br>
+            <h4>Robots help with automating many processes.<h4>
+            <div class="robot_content"><p>Robots help with automating many processes.&nbsp;In
+        this homework we will program a prototype of automated guided warehouse transportation
+        robot. We will use LEGO® Mindstorms® EV3, which is the third generation of LEGO robots. By
+        combining LEGO elements with a programmable brick, motors and sensors, you can make
+        your models walk, talk, grab objects and do almost anything you can imagine.</p></div>
+        <br>
+        <br>
+        <p>We will write a program to make the robot to behave similarly to the automated guided robot
+        in the previous video you watched i.e. move along the black line, stop whenever
+        there is an obstacle ahead and continue moving once the obstacle is removed.
+        The robot model will be tested on the LEGO Mindstorms NXT 2.0 Test Pad</p>
+        <img src="map.png" alt="map">
+        <img src="robot1.jfif" alt="robot">
+        <img src="robot2.jfif" alt="robot">
+        <img src="robot3.jpg" alt="robot">    
+        </div>    
+    </div>
+</body>
+</html>
